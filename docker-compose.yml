@@ -12,7 +12,7 @@ services:
   php:
     build: ./docker/php
     volumes:
-      - ./docker/php:/var/www/
+      - ./:/var/www/
 
   mysql:
     image: mysql:5.7
