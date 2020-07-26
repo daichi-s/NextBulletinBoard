@@ -15,3 +15,8 @@ reload:
 	@$(DC) up -d
 ps:
 	@$(DC) ps
+
+laravel:
+	@$(DC) exec php bash
+	composer create-project --prefer-dist laravel/laravel="6.* ."
+	exit
