@@ -17,7 +17,7 @@ ps:
 	@$(DC) ps
 
 laravel:
-	@$(DC) exec php composer create-project --prefer-dist laravel/laravel="6.*"
+	@$(DC) exec php composer create-project --prefer-dist laravel/laravel="7.*"
 	mv laravel/* ./
 	mv laravel/.[^\.]* ./
 	rm -r laravel
