@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Board;
 
 class BoardController extends Controller
 {
-   public function index()
+   public function index(Board $board)
     {
-        return view('board.index');
+        $boardList = $board->getList();
+
+        return view('board.index', ['boardList' => $boardList]);
     }
 }

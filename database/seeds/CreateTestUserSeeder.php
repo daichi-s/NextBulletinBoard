@@ -11,17 +11,14 @@ class CreateTestUserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            [
-                'name'     => 'testUser1',
-                'email'    => Str::random(10).'@exsample.com',
-                'password' => Hash::make('password'),
-            ],
-            [
-                'name'     => 'testUser2',
-                'email'    => Str::random(10).'@exsample.com',
-                'password' => Hash::make('password'),
-            ]
-        ]);
+        for ($i = 1; $i <= 10; $i++) {
+            DB::table('users')->insert([
+                [
+                    'name'     => "testUser{$i}",
+                    'email'    => "email-test{$i}@exsample.com",
+                    'password' => Hash::make('password'),
+                ],
+            ]);
+        }
     }
 }
