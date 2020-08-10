@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (Auth::check()) {
+            // ログインしている場合、掲示板画面に遷移
+            return redirect($this->routeParseUrl('board.index'));
+        }
+
+        return redirect($this->routeParseUrl('login'));
     }
 }

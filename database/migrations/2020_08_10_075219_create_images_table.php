@@ -15,7 +15,7 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('board_id')->comment('ボードID');
+            $table->integer('board_id')->comment('ボードID');
             $table->string('image_path')->comment('画像パス');
             $table->timestamps();
         });

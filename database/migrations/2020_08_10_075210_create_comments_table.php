@@ -15,9 +15,10 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('user_id')->comment('ユーザーID');
-            $table->tinyInteger('board_id')->comment('ボードID');
+            $table->integer('user_id')->comment('ユーザーID');
+            $table->integer('board_id')->comment('ボードID');
             $table->text('body')->comment('本文');
+            $table->text('status')->comment('公開ステータス');
             $table->softDeletes('deleted_at', 0);
             $table->timestamps();
         });

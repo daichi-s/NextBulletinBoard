@@ -15,9 +15,10 @@ class CreateBoardsTable extends Migration
     {
         Schema::create('boards', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('user_id')->comment('ユーザーID');
+            $table->integer('user_id')->comment('ユーザーID');
             $table->string('title')->comment('タイトル');
             $table->text('body')->comment('本文');
+            $table->tinyInteger('status')->comment('公開ステータス');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
         });
