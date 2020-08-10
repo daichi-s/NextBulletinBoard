@@ -7,7 +7,7 @@ use App\Models\Board;
 
 class BoardController extends Controller
 {
-   public function index(Board $board)
+    public function index(Board $board)
     {
         $boardList = $board->getList();
 
