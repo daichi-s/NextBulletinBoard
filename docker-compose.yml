@@ -21,7 +21,7 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: db
+      MYSQL_DATABASE: BulletinBoard
       MYSQL_USER: docker
       MYSQL_PASSWORD: docker
       MYSQL_ROOT_PASSWORD: root
