@@ -28,7 +28,6 @@ class HomeController extends Controller
             // ログインしている場合、掲示板画面に遷移
             return redirect($this->routeParseUrl('board.index'));
         }
-
         return redirect($this->routeParseUrl('login'));
     }
 }

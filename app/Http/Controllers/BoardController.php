@@ -11,6 +11,6 @@ class BoardController extends Controller
     {
         $boardList = $board->getList();
 
-        return view('board.index', ['boardList' => $boardList]);
+        return view('board/index', ['boardList' => $boardList]);
     }
 }
