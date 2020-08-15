@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::prefix('board')->group(function () {
         Route::get('/', 'BoardController@index')->name('board.index');
         Route::get('/create', 'BoardController@create')->name('board.create');
+        Route::post('/store', 'BoardController@store')->name('board.store');
         Route::put('/{id}/edit', 'BoardController@edit')->name('board.edit');
         Route::delete('/delete', 'BoardController@delete')->name('board.delete');
 
